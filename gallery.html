@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gallery - The Pearl Vista</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <div class="nav-left">
+                <i class="fas fa-user-circle user-icon"></i>
+            </div>
+            <ul class="nav-right">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">ROOMS</a></li>
+                <li><a href="#">SERVICES</a></li>
+                <li><a href="#">GALLERY</a></li>
+                <li><a href="contact_us.html">CONTACT US</a></li>
+                <li><a href="#">LOCATIONS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <img id="heroImage" src="/images/Hotel.png" alt="Front exterior of The Pearl Vista hotel" />
+            <video id="heroVideo" controls>
+                <source src="/video/hotel_tour.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="overlay-content" id="overlayContent">
+            <h1 tabindex="0">Discover in 360°</h1>
+            <button class="btn-tour" onclick="startVirtualTour()">
+                <i class="fas fa-play-circle"></i> Start a virtual tour
+            </button>
+        </div>
+    </section>
+
+    <!-- Gallery Cards -->
+    <section class="gallery-cards" aria-label="Gallery categories">
+        <div class="card" role="button" tabindex="0" aria-label="Lobby virtual tour category">
+            <img src="/images/Lobby.png" alt="Hotel lobby interior" />
+            <div class="card-label">Lobby</div>
+        </div>
+        <div class="card" role="button" tabindex="0" aria-label="Rooms virtual tour category">
+            <img src="/images/Room.png" alt="Hotel room interior" />
+            <div class="card-label">Rooms</div>
+        </div>
+        <div class="card" role="button" tabindex="0" aria-label="Pool virtual tour category">
+            <img src="/images/Pool.png" alt="Swimming pool at sunset" />
+            <div class="card-label">Pool</div>
+        </div>
+        <div class="card" role="button" tabindex="0" aria-label="Restaurant virtual tour category">
+            <img src="/images/Restaurant.png" alt="Hotel restaurant interior" />
+            <div class="card-label">Restaurant</div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+        const image = document.getElementById('heroImage');
+        const video = document.getElementById('heroVideo');
+        const overlay = document.getElementById('overlayContent');
+
+        function startVirtualTour() {
+            // Fade out the image and overlay
+            image.style.opacity = '0';
+            overlay.style.opacity = '0';
+
+            // After fade out, hide them
+            setTimeout(() => {
+                image.style.display = 'none';
+                overlay.style.display = 'none';
+
+                // Show and play the video
+                video.style.display = 'block';
+                video.currentTime = 0; // Start from beginning
+                setTimeout(() => {
+                    video.style.opacity = '1';
+                    video.play();
+                }, 300);
+            }, 300);
+        }
+
+        // When video ends, fade it out and show image + overlay
+        video.addEventListener('ended', () => {
+            // Fade out video
+            video.style.opacity = '0';
+
+            setTimeout(() => {
+                video.style.display = 'none';
+                image.style.display = 'block';
+                overlay.style.display = 'block';
+
+                // Fade in image and overlay
+                setTimeout(() => {
+                    image.style.opacity = '1';
+                    overlay.style.opacity = '1';
+                }, 300);
+            }, 300);
+        });
+    </script>
+</body>
+</html>

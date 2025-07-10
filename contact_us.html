@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <div class="nav-left">
+                <i class="fas fa-user-circle user-icon"></i>
+            </div>
+            <ul class="nav-right">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">ROOMS</a></li>
+                <li><a href="#">SERVICES</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="contact_us.html">CONTACT US</a></li>
+                <li><a href="#">LOCATIONS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Contact Details Section -->
+        <div class="contact-details">
+            <h1><center>Contact Details</center></h1>
+            <p><i class="fas fa-phone" style="color: #FF7F50;"></i> <strong>Reception</strong>: <br> +59741122566 <br> +99451278478</p>
+            <p><i class="fas fa-envelope" style="color: #007BFF;"></i> <strong>Inquiries</strong>: <br> info@thepearlvista.co</p>
+            <p><i class="fas fa-map-marker-alt" style="color: #FF4C4C;"></i> <strong>Address</strong>: <br> Trees Valley, New York</p>
+            <p><i class="fas fa-clock" style="color: #28A745;"></i> <strong>Operating Hours</strong>: <br> 6 a.m. - 11 p.m.</p>
+            <p><i class="fas fa-calendar-check" style="color: #ff07e2;"></i> <strong>Check-In Time / Check-Out Time</strong>: <br> 11 a.m.</p>
+        </div>
+
+        <!-- Contact Form Section -->
+        <div class="contact-form">
+            <h1><center>Contact Form</center></h1>
+            <form>
+                <label for="name"><i class="fas fa-user"></i> Name</label>
+                <input type="text" id="name" required>
+
+                <label for="phone"><i class="fas fa-phone"></i> Phone No.</label>
+                <input type="tel" id="phone" required>
+
+                <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                <input type="email" id="email" required>
+
+                <label for="inquiry"><i class="fas fa-comment-dots"></i> Inquiry</label>
+                <textarea id="inquiry" required></textarea>
+
+                <button type="submit"> Send Message</button>
+                <button type="button"> Request a call back</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Floating Chat Widget -->
+    <div class="chat-widget">
+        <i class="fas fa-comment-dots"></i> Chat with us
+    </div>
+</body>
+</html>
