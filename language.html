@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Language & Currency</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
+      color: #000;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: white;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .user-icon {
+      font-size: 28px;
+      color: #000;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    .container {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 30px;
+      margin-bottom: 40px;
+    }
+
+    h1::before {
+      content: "🌐 ";
+    }
+
+    .flex-box {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 80px;
+    }
+
+    .column {
+      flex: 1;
+      min-width: 250px;
+      max-width: 400px;
+      text-align: left;
+    }
+
+    .column h2 {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    .column h2::before {
+      margin-right: 5px;
+    }
+
+    .column ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    .column:first-child h2::before {
+      content: "🈯";
+    }
+
+    .column:last-child h2::before {
+      content: "💲";
+    }
+
+    .btn-container {
+      margin-top: 30px;
+    }
+
+    .btn-container button {
+      background-color: #e57300;
+      color: white;
+      font-weight: bold;
+      padding: 12px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .back {
+      text-align: right;
+      margin: 30px 40px 10px 0;
+      font-size: 18px;
+    }
+
+    .back a {
+      text-decoration: none;
+      color: black;
+    }
+
+    @media (max-width: 700px) {
+      .flex-box {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="user-icon">
+      <i class="fa fa-user-circle"></i>
+    </div>
+    <nav>
+      <a href="index.html">HOME</a>
+      <a href="about-us.html">ABOUT US</a>
+      <a href="rooms.html">ROOMS</a>
+      <a href="services.html">SERVICES</a>
+      <a href="gallery.html">GALLERY</a>
+      <a href="contact.html">CONTACT US</a>
+      <a href="locations.html">LOCATIONS</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Language & Currency Switch</h1>
+
+    <div class="flex-box">
+      <div class="column">
+        <h2>Choose Your Language</h2>
+        <ul>
+          <li>English (United States)</li>
+          <li>English (United Kingdom)</li>
+          <li>French</li>
+          <li>Spanish</li>
+          <li>Dutch</li>
+          <li>Hindi</li>
+          <li>Chinese</li>
+          <li>German</li>
+          <li>Japanese</li>
+          <li>Korean</li>
+          <li>Turkish</li>
+        </ul>
+      </div>
+
+      <div class="column">
+        <h2>Choose Your Currency</h2>
+        <ul>
+          <li>INR - Indian Rupee</li>
+          <li>USD - US Dollar</li>
+          <li>EUR - Euro</li>
+          <li>GBP - British Pound</li>
+          <li>JYP - Japanese Yen</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="btn-container">
+      <button>Save Preferences</button>
+    </div>
+
+    <div class="back">
+      <a href="home.html">Back</a>
+    </div>
+  </div>
+
+</body>
+</html>

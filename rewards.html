@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rewards & Membership</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff;
+      color: #000;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: white;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .user-icon {
+      font-size: 28px;
+      color: #000;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    .container {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    h1::before {
+      content: "🎁 ";
+    }
+
+    .membership-banner {
+      background-color: #d8c917;
+      padding: 20px;
+      font-weight: bold;
+      color: #000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      font-size: 22px;
+      border-radius: 3px;
+      margin-bottom: 40px;
+    }
+
+    .benefits-section {
+      text-align: left;
+      margin: 0 auto 30px;
+      max-width: 800px;
+    }
+
+    .benefits-section ul {
+      padding-left: 20px;
+    }
+
+    table {
+      width: 100%;
+      max-width: 800px;
+      margin: 30px auto;
+      border-collapse: collapse;
+    }
+
+    table, th, td {
+      border: 1px solid #000;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 25px;
+      flex-wrap: wrap;
+    }
+
+    .buttons button {
+      background-color: #d8c917;
+      color: #000;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .rewards-info {
+      max-width: 800px;
+      margin: 40px auto;
+      text-align: left;
+    }
+
+    .progress-bar {
+      background-color: #d8c917;
+      height: 8px;
+      width: 70%;
+      margin: 10px auto 20px;
+      border-radius: 10px;
+    }
+
+    .rewards-info h3 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .info-grid {
+      display: flex;
+      justify-content: space-between;
+      font-size: 15px;
+      padding: 0 10px;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .back {
+      text-align: right;
+      padding-right: 40px;
+      margin-top: 30px;
+      font-size: 18px;
+    }
+
+    .back a {
+      text-decoration: none;
+      color: black;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
+
+      .membership-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .info-grid {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="user-icon">
+      <i class="fa fa-user-circle"></i>
+    </div>
+    <nav>
+      <a href="home.html">HOME</a>
+      <a href="about-us.html">ABOUT US</a>
+      <a href="rooms.html">ROOMS</a>
+      <a href="services.html">SERVICES</a>
+      <a href="gallery.html">GALLERY</a>
+      <a href="contact.html">CONTACT US</a>
+      <a href="locations.html">LOCATIONS</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Rewards & Membership</h1>
+
+    <div class="membership-banner">
+      <div>Pearl Gold<br><small>Member till 15 July 2026</small></div>
+      <div>Points Available - <strong>16000 pts</strong></div>
+    </div>
+
+    <div class="benefits-section">
+      <h2>Pearl Gold Benefits</h2>
+      <ul>
+        <li>Complimentary Breakfast</li>
+        <li>Room Upgrade (subject to availability)</li>
+        <li>Late Checkout / Early Check-in</li>
+        <li>Free Spa or Massage Vouchers</li>
+        <li>Invitations to Exclusive Events</li>
+        <li>Birthday Surprises / Anniversary Treats</li>
+      </ul>
+    </div>
+
+    <table>
+      <tr>
+        <th>Tier Name</th>
+        <th>Points Required</th>
+        <th>Benefits</th>
+      </tr>
+      <tr>
+        <td>Pearl Basic</td>
+        <td>Free Sign-Up</td>
+        <td>Standard</td>
+      </tr>
+      <tr>
+        <td>Pearl Silver</td>
+        <td>5000 pts</td>
+        <td>Priority booking, 5% discount</td>
+      </tr>
+      <tr>
+        <td>Pearl Gold</td>
+        <td>15000 pts</td>
+        <td>Free upgrades, 10% discount</td>
+      </tr>
+      <tr>
+        <td>Pearl Platinum</td>
+        <td>30000 pts</td>
+        <td>VIP Lounge, Free Tour, 20% off</td>
+      </tr>
+    </table>
+
+    <div class="buttons">
+      <button>Redeem Points</button>
+      <button>Upgrade Plan</button>
+    </div>
+
+    <div class="rewards-info">
+      <h3>How The Rewards Work</h3>
+      <div class="progress-bar"></div>
+      <div class="info-grid">
+        <div><strong>Earn Points</strong><br>100 points on eligible booking</div>
+        <div><strong>Redeem Points</strong><br>Use points for discounts, free nights, upgrades or experience</div>
+        <div><strong>Points Validity</strong><br>12 Months from earning date</div>
+      </div>
+    </div>
+
+    <div class="back">
+      <a href="home.html">Back</a>
+    </div>
+  </div>
+
+</body>
+</html>

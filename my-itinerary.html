@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Itinerary - The Pearl Vista</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
+      color: #000;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      border-bottom: 1px solid #ccc;
+      background-color: #fff;
+    }
+
+    .logo {
+      font-size: 28px;
+      color: #000;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #000;
+    }
+
+    .main {
+      padding: 20px 40px;
+    }
+
+    .title-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 30px 0 10px;
+    }
+
+    .title-bar h1 {
+      font-size: 28px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .title-bar a {
+      text-decoration: none;
+      font-size: 18px;
+      color: #000;
+    }
+
+    .info-strip {
+      background-color: #000;
+      color: #fff;
+      padding: 18px 30px;
+      font-size: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .timeline-calendar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 40px 0;
+    }
+
+    .timeline {
+      flex: 1;
+      min-width: 300px;
+      padding-right: 30px;
+    }
+
+    .calendar {
+      flex: 1;
+      min-width: 300px;
+      text-align: center;
+    }
+
+    .timeline h3,
+    .calendar h3 {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    .event {
+      margin-bottom: 20px;
+    }
+
+    .event strong {
+      font-size: 18px;
+    }
+
+    .event p {
+      margin-left: 40px;
+    }
+
+    .add-activity {
+      margin-top: 10px;
+      font-size: 18px;
+      color: #000;
+      cursor: pointer;
+    }
+
+    .calendar-box {
+      display: inline-block;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+
+    .calendar-box h4 {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .calendar-box table {
+      width: 100%;
+      border-spacing: 8px;
+      font-size: 16px;
+    }
+
+    .calendar-box td {
+      padding: 8px;
+      text-align: center;
+    }
+
+    .calendar-box .active {
+      background-color: navy;
+      color: white;
+      border-radius: 50%;
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px 0 40px;
+    }
+
+    .btn-group button {
+      padding: 12px 20px;
+      border: none;
+      background-color: #e96c0c;
+      color: white;
+      font-size: 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      box-shadow: 2px 4px 6px rgba(0,0,0,0.2);
+    }
+
+    @media (max-width: 768px) {
+      .timeline-calendar {
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .btn-group {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <i class="fa fa-user-circle"></i>
+  </div>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="about-us.html">ABOUT US</a>
+    <a href="rooms.html">ROOMS</a>
+    <a href="services.html">SERVICES</a>
+    <a href="gallery.html">GALLERY</a>
+    <a href="contact-us.html">CONTACT US</a>
+    <a href="locations.html">LOCATIONS</a>
+  </nav>
+</header>
+
+<div class="main">
+  <div class="title-bar">
+    <h1>📋 My Itinerary</h1>
+    <a href="home.html">Back</a>
+  </div>
+
+  <div class="info-strip">
+    <div>Welcome, Guest!<br/>July 15 - July 22, 2025</div>
+    <div>Luxury Suite<br/>2 Adults, 1 Child</div>
+  </div>
+
+  <div class="timeline-calendar">
+    <div class="timeline">
+      <h3>Timeline View</h3>
+      <div class="event">
+        <strong>Day 1</strong>
+        <p>3 p.m<br/>Check-In & Welcome Drink</p>
+      </div>
+      <div class="event">
+        <strong>Day 2</strong>
+        <p>7:30 p.m<br/>Dinner Reservation</p>
+      </div>
+      <div class="event">
+        <strong>Day 3</strong>
+        <p>11 a.m<br/>Guided tour at Bryant Park</p>
+      </div>
+      <div class="add-activity">＋ Add Activity</div>
+    </div>
+
+    <div class="calendar">
+      <h3>Calendar View</h3>
+      <div class="calendar-box">
+        <h4>July</h4>
+        <table>
+          <tr><td>S</td><td>M</td><td>T</td><td>W</td><td>T</td><td>F</td><td>S</td></tr>
+          <tr><td> </td><td> </td><td> </td><td> </td><td>1</td><td>2</td><td>3</td></tr>
+          <tr><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+          <tr><td>11</td><td>12</td><td>13</td><td>14</td><td class="active">15</td><td class="active">16</td><td class="active">17</td></tr>
+          <tr><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="btn-group">
+    <button>Book spa</button>
+    <button>Reserve table</button>
+    <button>Plan an event</button>
+    <button>Download PDF</button>
+  </div>
+</div>
+
+</body>
+</html>

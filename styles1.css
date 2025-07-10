@@ -1,0 +1,657 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+}
+
+
+/* Shared Pages */
+.page {
+  display: none;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Show landing page first */
+#landingPage {
+  display: flex;
+}
+
+/* Background Landing Page */
+/* Hero Section - Ensure it can handle large text */
+.hero {
+  background: url('cover.png') no-repeat center center/cover;
+  text-align: center;
+  color: white;
+  position: relative;
+  height: 100vh; /* Make the hero section take full screen height */
+  display: flex;
+  align-items: center; /* Vertically center content */
+  justify-content: center; /* Horizontally center content */
+}
+
+/* Title of the page (THE PEARL VISTA) */
+.content h1 {
+  font-size: 15rem;  /* Set font size to 70% of the viewport height */
+  font-weight: bold;
+  margin: 0;  /* Remove any default margin */
+  white-space: nowrap;  /* Prevents the text from wrapping */
+  overflow: hidden;  /* Ensures it doesn’t overflow outside the container */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Optional: adds shadow for readability */
+}
+
+/* Overlay to darken the image */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Title of the page */
+.content h1 {
+  font-size: 10rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Full-width row with light red background */
+.highlight-text {
+  font-size: 2.5rem;
+  font-weight: bold;  /* Make the text bold */
+  color: white;       /* Text color is white */
+  background-color: rgba(255, 0, 0, 0.3); /* Light red background */
+  padding: 1rem;      /* Padding to add space around the text */
+  width: 100vw;       /* Ensure it spans the full width of the viewport */
+  position: relative;
+  left: 0;            /* Make sure it starts from the left side */
+  display: block;     /* Make sure it takes up the full width */
+  box-sizing: border-box; /* Include padding in width calculation */
+  z-index: 2;         /* Ensure it sits above the image */
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+
+
+/* Buttons */
+.btn {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-align: center;
+}
+
+.signup {
+  background-color: #0000ff;
+  color: white;
+}
+
+.signup:hover {
+  background-color: #0000cc;
+}
+
+.login {
+  background-color: #1a2e2c;
+  color: white;
+}
+
+.login:hover {
+  background-color: #12201f;
+}
+
+/* Sign Up */
+.form-wrapper h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  background: #e8edf8;
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  width: 280px;
+  margin-bottom: 1.2rem;
+}
+
+.input-group .icon {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.input-group input {
+  border: none;
+  background: none;
+  font-size: 1rem;
+  outline: none;
+  flex: 1;
+}
+
+.full {
+  width: 280px;
+  margin-top: 1rem;
+}
+
+/* Verify Email */
+.verify-box {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.sent-text {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.verify-box h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.instruction {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.code-input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px;
+  background-color: #eef1f8;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Resend Page */
+.resend-box {
+  text-align: center;
+  background-color: white;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  max-width: 400px;
+  width: 90%;
+}
+
+.resend-box h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.resend-box p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.password-wrapper {
+  background-color: #f8f9fc;
+  justify-content: center;
+  align-items: center;
+}
+
+.password-box {
+  background-color: white;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.password-box h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.password-box p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.password-box .input-group {
+  margin-bottom: 15px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  background: #e8edf8;
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  width: 280px;
+  margin: 0 auto 1.2rem;
+  position: relative;
+}
+
+.input-group input {
+  border: none;
+  background: none;
+  font-size: 1rem;
+  outline: none;
+  flex: 1;
+}
+
+.toggle {
+  position: absolute;
+  right: 12px;
+  font-size: 1.1rem;
+  color: #333;
+  cursor: pointer;
+  user-select: none;
+}
+
+.toggle i {
+  pointer-events: none; /* Makes sure clicking the icon triggers the span */
+}
+
+.full {
+  width: 280px;
+  margin-top: 1rem;
+}
+
+#loginPage {
+  display: none; /* managed via JS */
+}
+
+
+ .input-group select,
+.input-group input {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 12px;
+  background: #fce7d8;
+  font-size: 1rem;
+  outline: none;
+}
+
+
+.success-banner {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 12px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 18px;
+  border: 1px solid #c3e6cb;
+}
+
+
+.page {
+  display: none;  /* hides pages by default */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+#homePage.hero {
+  background: url('home.png') no-repeat center center/cover;
+  height: 100vh;
+  color: white;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#homePage .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+#homePage .content {
+  position: relative;
+  z-index: 2;
+}
+
+
+
+#homePage .btn.signup {
+  background-color: #0000ff;
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 12px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+
+
+/* Home Page Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: white;
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.nav-left i {
+  font-size: 1.8rem;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+/* Welcome Text */
+#homePage .content h1 {
+  font-size: 8rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+/* Check Availability Button */
+.btn.check {
+  background-color: #0000ff;
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 12px;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.btn.check:hover {
+  background-color: #0000cc;
+}
+
+.user-wrapper {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 9999;
+}
+
+.user-icon {
+  font-size: 24px;
+  background: black;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.user-dropdown {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 260px;
+  background: black;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+.user-header {
+  background: #c76b28;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.user-dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.user-dropdown ul li {
+  padding: 10px 15px;
+  font-size: 15px;
+  font-weight: 600;
+  border-bottom: 1px solid white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.user-dropdown ul li:hover {
+  background-color: goldenrod;
+}
+
+.logout {
+  color: red;
+  font-weight: bold;
+  padding: 12px 15px;
+  cursor: pointer;
+  border-top: 1px solid black;
+}
+
+/* Basic nav styling */
+nav {
+  background: white;
+  padding: 15px 30px;
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+/* Dropdown hidden by default */
+.dropdown-menu {
+  display: none;
+  list-style-type: none; 
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  color: black;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px black;
+  padding: 10px 0;
+  z-index: 999;
+  width: 220px;
+}
+
+.dropdown-menu li {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+  background-color: black;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Dropdown list items */
+.dropdown-menu li {
+  padding: 10px 20px;
+  white-space: nowrap;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.dropdown-menu li:hover {
+  background-color: goldenrod;
+}
+
+
+
+.privacy-policy-container {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 30px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #000;
+}
+
+.privacy-policy-container h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.privacy-policy-container h4 {
+  font-size: 20px;
+  margin-top: 30px;
+  font-weight: 600;
+}
+
+.privacy-policy-container ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.privacy-policy-container li {
+  margin-bottom: 10px;
+}
+
+input[type="date"],
+input[type="number"],
+input[type="text"] {
+  font-size: 16px;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 5px;
+  width: 180px;
+  text-align: center;
+}
+
+button.btn.check {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: linear-gradient(to right, #04AA6D, #00c6ff);
+  color: white;
+  font-weight: bold;
+  border: none;
+  margin-top: 10px;
+}
+
+
+.date-btn {
+  background-color: #ffd9b3;
+  border: none;
+  padding: 15px 25px;
+  font-size: 18px;
+  border-radius: 30px;
+  margin: 10px;
+  box-shadow: 2px 2px 4px #888;
+}
+
+
+#availabilitySection input {
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#availabilitySection img {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.overlay {
+  display: none !important;
+}
+
+
+
+.user-dropdown ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.user-dropdown ul li i {
+  font-size: 18px;
+  color:white;
+}
+
+.user-dropdown ul li a {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}

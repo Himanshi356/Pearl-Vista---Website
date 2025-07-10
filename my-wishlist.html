@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Wishlist</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff;
+      color: #000;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px;
+      background-color: white;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .user-icon {
+      font-size: 28px;
+      color: #000;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    .container {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+
+    h1::before {
+      content: "❤️ ";
+    }
+
+    .wishlist-section {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      background-color: #fce0c9;
+      padding: 20px;
+      border-radius: 20px;
+      width: 300px;
+      border: 1px solid #333;
+      text-align: center;
+    }
+
+    .box h2 {
+      margin-top: 0;
+      background-color: #fce0c9;
+      padding: 10px 0;
+      border-bottom: 2px solid #000;
+    }
+
+    .room-img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin: 10px 0;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .buttons button {
+      background-color: #e66911;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 20px;
+      font-size: 16px;
+      font-weight: bold;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+      cursor: pointer;
+    }
+
+    .back {
+      margin-top: 30px;
+      text-align: right;
+      padding-right: 40px;
+      font-size: 18px;
+    }
+
+    .back a {
+      text-decoration: none;
+      color: black;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
+
+      .wishlist-section {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="user-icon">
+      <i class="fa fa-user-circle"></i>
+    </div>
+    <nav>
+      <a href="home.html">HOME</a>
+      <a href="about-us.html">ABOUT US</a>
+      <a href="rooms.html">ROOMS</a>
+      <a href="services.html">SERVICES</a>
+      <a href="gallery.html">GALLERY</a>
+      <a href="contact.html">CONTACT US</a>
+      <a href="locations.html">LOCATIONS</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>My Wishlist</h1>
+
+    <div class="wishlist-section">
+      <div class="box">
+        <h2>Saved Rooms</h2>
+        <img src="images/room-image.jpg" alt="Luxury Suite" class="room-img">
+        <p>Luxury Suite<br>26500 / night<br>Available</p>
+      </div>
+
+      <div class="box">
+        <h2>Saved Services</h2>
+        <ul style="text-align: left;">
+          <li>Spa Treatment</li>
+          <li>Azure Sky Restaurant</li>
+          <li>Guided tour to Bryant Park</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button>Move To Booking</button>
+      <button>Remove</button>
+    </div>
+
+    <div class="back">
+      <a href="home.html">Back</a>
+    </div>
+  </div>
+
+</body>
+</html>

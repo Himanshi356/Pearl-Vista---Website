@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Bookings - The Pearl Vista</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fff;
+      padding: 15px 30px;
+      border-bottom: 1px solid #ccc;
+      flex-wrap: wrap;
+    }
+
+    .user-icon {
+      font-size: 28px;
+      color: #000;
+    }
+
+    .header h1 {
+      margin: 10px 0;
+      font-size: 26px;
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .booking-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      padding: 40px 30px;
+      flex-wrap: wrap;
+    }
+
+    .booking-card {
+      background-color: #fff3e0;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      width: 48%;
+      min-width: 280px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .booking-card h2 {
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    .booking-card p {
+      margin: 8px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #ff6f20;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+
+    .booking-card div {
+      margin-top: 10px;
+    }
+
+    .back-btn {
+      margin: 30px;
+      display: inline-block;
+      text-decoration: none;
+      color: #ff6f20;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .header h1 {
+        text-align: left;
+        font-size: 22px;
+      }
+
+      .nav {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 10px;
+      }
+
+      .booking-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+      }
+
+      .booking-card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="user-icon"><i class="fa fa-user-circle"></i></div>
+    <h1>My Bookings</h1>
+    <div class="nav">
+      <a href="home.html">Home</a>
+      <a href="about-us.html">About Us</a>
+      <a href="rooms.html">Rooms</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact-us.html">Contact Us</a>
+      <a href="locations.html">Locations</a>
+    </div>
+  </div>
+
+  <div class="booking-container">
+    <div class="booking-card">
+      <h2>Upcoming Bookings</h2>
+      <p><strong>Room Type:</strong> Luxury Suite</p>
+      <p><strong>Check-In Date:</strong> 15th July 2025</p>
+      <p><strong>Check-Out Date:</strong> 22nd July 2025</p>
+      <p><strong>Booking Status:</strong> Confirmed</p>
+      <p><strong>Booking Payment:</strong> Completed</p>
+      <a href="#" class="btn">View Details</a>
+    </div>
+
+    <div class="booking-card">
+      <h2>Past Bookings</h2>
+      <p><strong>Last Stay Date:</strong> 25th November 2024</p>
+      <p><strong>Payment:</strong> Completed</p>
+      <a href="#" class="btn">Click Here</a>
+      <div>
+        <a href="#" class="btn">Rebook</a>
+        <a href="#" class="btn">Write a review</a>
+      </div>
+    </div>
+  </div>
+
+  <a href="home.html" class="back-btn">← Back</a>
+
+</body>
+</html>

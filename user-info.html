@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Information - The Pearl Vista</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
+      color: #000;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      border-bottom: 1px solid #ccc;
+      background-color: #fff;
+    }
+
+    .logo {
+      font-size: 28px;
+      color: #000;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #000;
+    }
+
+    .main {
+      height: calc(100% - 70px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .main h1 {
+      font-size: 32px;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .form-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .form-grid input {
+      width: 280px;
+      height: 50px;
+      padding: 10px;
+      border-radius: 20px;
+      border: 1px solid #aaa;
+      background-color: #fdecdc;
+      font-size: 16px;
+      box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.15);
+      text-align: center;
+    }
+
+    .update-btn {
+      padding: 15px 35px;
+      font-size: 18px;
+      font-weight: bold;
+      background-color: #e96c0c;
+      color: #fff;
+      border: none;
+      border-radius: 16px;
+      cursor: pointer;
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .back-link {
+      position: absolute;
+      bottom: 20px;
+      right: 30px;
+      font-size: 18px;
+    }
+
+    .back-link a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        justify-content: center;
+        margin-top: 10px;
+      }
+
+      .form-grid {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <i class="fa fa-user-circle"></i>
+  </div>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="aboutus.html">ABOUT US</a>
+    <a href="#">ROOMS</a>
+    <a href="#">SERVICES</a>
+    <a href="#">GALLERY</a>
+    <a href="#">CONTACT US</a>
+    <a href="#">LOCATIONS</a>
+  </nav>
+</header>
+
+<div class="main">
+  <h1>👤 Personal Information</h1>
+
+  <div class="form-grid">
+    <input type="text" placeholder="Full Name" />
+    <input type="email" placeholder="Email" />
+    <input type="tel" placeholder="Phone No." />
+    <input type="text" placeholder="ID" />
+  </div>
+
+  <button class="update-btn">🖊️ Update Details</button>
+</div>
+
+<div class="back-link">
+  <a href="home.html">Back</a>
+</div>
+
+</body>
+</html>
